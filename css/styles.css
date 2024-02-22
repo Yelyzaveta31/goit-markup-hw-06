@@ -539,12 +539,18 @@ height: 40px;
     /* Портфоліо */
     /* Четверта секція */
 
+
     .portfolio-section {
     background: var(--WHITE, #FFF);
-    padding-top: 120px;
-    padding-bottom: 120px; 
+    padding: 96px 0;
     }
     
+    @media screen  and (min-width:1158px) {
+    .portfolio-section {
+       
+        padding: 120px 0;
+        }}
+        
 
     .heading-portfolio {
         color: var(--NAVY-BLUE, #2E2F42);
@@ -557,19 +563,51 @@ height: 40px;
         line-height: 1.11;
         margin-bottom: 72px; }
         
+
         .portfolio-list { 
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px; 
+    flex-direction: column;
+    gap: 48px; 
 }
 
+
+@media screen  and (min-width:768px) {
+    .portfolio-list { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px; }}
+
+
+@media screen  and (min-width:1158px) {
+    .portfolio-list { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px; }}
+
+
+     .portfolio-list-item {
+           width: 288px; 
+          transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+
+          @media screen  and (min-width:768px) {
+            .portfolio-list-item {
+                width: calc(( 100% - 24px ) / 2); 
+                cursor: pointer;
+            }}
+            
+
+
+        @media screen  and (min-width:1158px) {
 .portfolio-list-item {
     width: calc(( 100% - 48px ) / 3); 
-    cursor: pointer;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-}
+
+}}
+
 .portfolio-list-item:hover {
     box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); 
 }
@@ -579,6 +617,26 @@ height: 40px;
     border: 1px solid #e7e9fc; 
     border-top: none; 
 }
+
+.title-portfolio {
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: #2e2f42;
+        }
+    
+    
+        .text-portfolio {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: #434455;
+        }
+    
+
+
 
 .portfolio-overlay-container {
 position: relative;
