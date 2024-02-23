@@ -14,7 +14,9 @@ color: var(--SLATE, #434455);
 background-color: #FFF;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 h1,
 h2,
@@ -51,24 +53,6 @@ img {
 
 
 
-.container {
-    width: 320px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-@media screen and (min-width: 768px)
- { .container {
-    width: 768px;
-}
-}
-
-@media screen and (min-width: 1158px){
-.container {
-    width: 1158px;
-    padding: 0 15px;
-}
-}
 
 
 /*  Шапка веб-сторінки  */
@@ -77,11 +61,14 @@ img {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 background: #fff;
+
+
 }
 
 .header-cont {
     display: flex;
     align-items: center;
+    width: 320px;
 }
 
 
@@ -104,9 +91,16 @@ background: #fff;
         flex-direction: row;
         width: 115px;
         margin-right: 76px;
-        padding: 24px 0;
+        padding: 16px 0;
 
        
+}
+
+@media screen and (min-width: 768) {
+    .logo {
+       padding: 24px;
+}
+    
 }
 .logo-top {
     color: var(--NAVY-BLUE, #2E2F42);}
@@ -116,6 +110,14 @@ background: #fff;
     gap: 40px;
  }
   
+ @media screen and (max-width: 767px){
+    .nav-menu {
+        display: none;
+    } 
+    }
+
+
+
 
 .header-link {
     color: var(--NAVY-BLUE, #2E2F42);
@@ -159,6 +161,12 @@ bottom: -1px;
     margin-left: 317px;
 }
 
+@media screen and (max-width: 767px){
+    .address-link {
+        display: none;
+    } 
+    }
+
 
  .adresses-link-subtitle {
        color:#434455;
@@ -175,15 +183,201 @@ bottom: -1px;
 .adresses-link-item .adresses-link-subtitle:hover { color:  #404bbf}
 .adresses-link-item .adresses-link-subtitle:focus { color:  #404bbf}
 
+/* Меню  */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: none;
+    padding-top: 72px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 40px;
+    background-color: #FFF;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+
+ .mobile-menu .is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+}
+}
+
+
+.mobile-menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top:16px;
+    right: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-menu-btn {
+        display: none;
+}
+}
+
+.menu-close-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+   fill: #e7e9fc; stroke-width: 1px;
+stroke: rgba(0, 0, 0, 0.1);
+cursor: pointer;
+background-color:rgba(231, 233, 252, 1);
+position: absolute;
+top: 24px;
+right: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid rgba(0, 0, 0, 0.1); 
+padding: 0;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
+
+}
+.close-icon-svg {
+    fill: currentColor;  
+    ransition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+
+.menu-close-btn:hover,
+.menu-close-btn:focus {
+    border: none;
+    background-color: #404BBF;
+    fill: #fffff;
+}
+
+.menu-close-btn:hover .close-icon-svg,
+.menu-close-btn:focus .close-icon-svg{
+    fill: #FFFFFF;
+} 
+
+.mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-bottom: auto;
+}
+
+.mobile-menu-item {
+
+}
+.mobile-menu-link {
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11111;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+color: #2e2f42;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.current {
+    color: #404bbf;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus 
+ { color: #404BBF;
+}
+
+.mobile-menu-link:active,
+ { color: #404BBF;
+}
+
+
+.mobile-contact-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+
+}
+.mobile-contact-item:first-child {
+    margin-bottom: 24px;
+}
+
+.mobile-contact-link {
+ 
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: #434455;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+
+}
+
+.mobile-contact-link.current {
+     color: #404BBF;
+}
+
+
+.mobile-social-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+.mobile-social-item {
+    width: 40px;
+    height: 40px;
+}
+
+
 /*   Замовити послуги */
 /* Перша секція */
+
+.container {
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+@media screen and (min-width: 768px)
+ { .container {
+    max-width: 768px;
+}
+}
+
+@media screen and (min-width: 1158px){
+.container {
+    max-width: 1158px;
+    padding: 0 15px;
+}
+}
 
 
 
 .section-business {
     background-color:var(--NAVY-BLUE, #2E2F42);
     padding: 72px 0;
-    width: 320px;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -192,7 +386,7 @@ bottom: -1px;
     url(../images/hero/people-mob@1x.jpg);
 }
 
-@media (min-resolution: 192dpi) {
+@media and (max-width:767px) and (min-resolution: 192dpi) {
     .section-business {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/people-mob@2x.jpg);
@@ -202,7 +396,6 @@ bottom: -1px;
 @media screen and (min-width:768px) {
     .section-business {
         padding: 112px 0;
-        max-width: 768px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/people-tabl@1x.jpg);
     }}
@@ -219,7 +412,6 @@ bottom: -1px;
 @media screen and (min-width:1158px) {
     .section-business {
         padding: 188px 0;
-        max-width: 1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/people-desk@1x.jpg);
     }
@@ -289,6 +481,7 @@ bottom: -1px;
 }
 
 /*  друга секція */
+
 
 
 .section-benefits {
@@ -486,6 +679,7 @@ color: var(--NAVY-BLUE, #2E2F42);
         flex-direction: column;
         gap: 72px;
         justify-content: center;
+        padding: 0 12px;
     }
 
     @media screen and (min-width:768px){
@@ -913,10 +1107,6 @@ height: 40px;
         width: 453px;   
 }  
 }
-
-
-
-
 .footer-caption {
 font-family: "Roboto", sans-serif;
 font-weight: 500;
@@ -1275,9 +1465,6 @@ margin-top: 24px;
 border: none;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-
-
-
 
 
 
