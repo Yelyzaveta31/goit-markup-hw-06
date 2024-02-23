@@ -51,6 +51,24 @@ img {
 
 
 
+.container {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+@media screen and (min-width: 768px)
+ { .container {
+    width: 768px;
+}
+}
+
+@media screen and (min-width: 1158px){
+.container {
+    width: 1158px;
+    padding: 0 15px;
+}
+}
 
 
 /*  Шапка веб-сторінки  */
@@ -165,7 +183,7 @@ bottom: -1px;
 .section-business {
     background-color:var(--NAVY-BLUE, #2E2F42);
     padding: 72px 0;
-    max-width: 320px;
+    width: 320px;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -272,24 +290,6 @@ bottom: -1px;
 
 /*  друга секція */
 
-.container {
-    width: 320px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-@media screen and (min-width: 768px)
- { .container {
-    width: 768px;
-}
-}
-
-@media screen and (min-width: 1158px){
-.container {
-    width: 1158px;
-    padding: 0 15px;
-}
-}
 
 .section-benefits {
     display: flex;
