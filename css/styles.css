@@ -68,7 +68,7 @@ background: #fff;
 .header-cont {
     display: flex;
     align-items: center;
-    width: 320px;
+    justify-content: space-between;
 }
 
 
@@ -99,6 +99,7 @@ background: #fff;
 @media screen and (min-width: 768) {
     .logo {
        padding: 24px;
+       display: inline-block;
 }
     
 }
@@ -130,7 +131,6 @@ background: #fff;
         display: block;
         padding: 24px 0;
         position: relative;
-        color: #404bbf;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
@@ -155,10 +155,15 @@ bottom: -1px;
 
 
 
+
 .address-link { font-style: normal;
     display: flex;
-    gap: 40px;
-    margin-left: 317px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    gap: 12px;
+    padding: 16px 0;
+
 }
 
 @media screen and (max-width: 767px){
@@ -166,6 +171,14 @@ bottom: -1px;
         display: none;
     } 
     }
+
+@media screen and (min-width: 1158px){
+    .address-link { font-style: normal;
+        flex-direction: row;
+        gap: 40px;
+        padding: 24px 0;
+ }}
+
 
 
  .adresses-link-subtitle {
@@ -362,13 +375,13 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 
 @media screen and (min-width: 768px)
  { .container {
-    max-width: 768px;
+    width: 768px;
 }
 }
 
 @media screen and (min-width: 1158px){
 .container {
-    max-width: 1158px;
+    width: 1158px;
     padding: 0 15px;
 }
 }
@@ -530,7 +543,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
  
 .benefits-list-item {
-    width: 288px;
+   min-width: 288px;
      
    
 }
@@ -624,8 +637,6 @@ text-align: start;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    width: 100%;
-
 }
 
 
@@ -813,6 +824,8 @@ height: 40px;
     display: flex;
     flex-direction: column;
     gap: 48px; 
+
+    align-items: center;
 }
 
 
@@ -834,7 +847,7 @@ height: 40px;
 
 
      .portfolio-list-item {
-           width: 288px; 
+          min-width: 288px; 
           transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); }
 
 
@@ -918,12 +931,15 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /* Футер */
 .footer {
     background: var(--NAVY-BLUE, #2E2F42);
+    display: flex;
     padding:  96px 0;
+    align-items: center;
 }
 
 
 @media screen and (min-width: 768px) {
     .footer {
+        display:  ;
         padding: 96px 108px;
     }   }
 
@@ -936,6 +952,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     flex-direction: column;
     flex-wrap: wrap;
     gap: 72px 24px;
+    text-align: center;
 }
 
 
@@ -943,6 +960,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     .footer .container {
         align-items: baseline; 
         flex-direction: row;
+        text-align: start;
     }   
     }
 
@@ -976,6 +994,7 @@ font-weight: 400;
         letter-spacing: 0.32px;
         line-height: 1.5;
         width: 264px;
+        text-align: start;
     
 }
 
@@ -1007,9 +1026,7 @@ color: var(--IRIS, #4D5AE5);
     line-height: 1.17;
     display: block;
     margin-bottom: 16px;
-    margin-left: 86px;
-    
-
+ 
 }
 
 
