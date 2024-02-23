@@ -399,7 +399,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
     url(../images/hero/people-mob@1x.jpg);
 }
 
-@media and (max-width:767px ) and (min-resolution: 192dpi) {
+@media screen and (max-width:767px ) and (min-resolution: 192dpi) {
     .section-business {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/people-mob@2x.jpg);
@@ -414,9 +414,8 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
     }}
 
 
-@media screen and (min-width:768px) and (min-resolution: 192dpi){
+@media screen and (min-width:768px) and (min-resolution: 192dpi) {
     .section-business {
-       
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero/people-tabl@2x.jpg);
     }
