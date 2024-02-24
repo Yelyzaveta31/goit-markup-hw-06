@@ -959,13 +959,13 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     .footer .container {
         align-items: baseline; 
         flex-direction: row;
-        text-align: start;
     }   
     }
 
 
     @media screen and (min-width: 1158px) {
         .footer .container {
+            text-align: start;
             column-gap: 0;
             row-gap: 0;
         }   
@@ -1089,9 +1089,17 @@ text-align: center;
 
 .footer-icon-links:hover,
 .footer-icon-links:focus
+
  {
     background-color: #31D0AA;
 }
+
+.footer-icon-links:active
+
+{
+   background-color: #31D0AA;
+}
+
 .footer-icon-items {
 width: 40px;
 height: 40px;
@@ -1228,7 +1236,7 @@ margin: 0 auto;
     left: 0;
     top: 0;
     background: rgba(46, 47, 66, 0.4);
-     opacity: 0;
+     /* opacity: 0;
     pointer-events: none;
     visibility: hidden;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
@@ -1239,7 +1247,7 @@ margin: 0 auto;
     opacity: 1;
     visibility: visible;
     pointer-events: initial;}
-    
+     */
 
 
 .modal {
